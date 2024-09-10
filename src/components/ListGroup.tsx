@@ -1,10 +1,13 @@
 import { useState } from 'react';
+import './ListGroup.css';
 
-function CityGame() {
-  const [cities, setCities] = useState(["New York", "Los Angeles", "Chicago", "Houston", "Phoenix"]);
-  const [newCity, setNewCity] = useState("");
-  const [diceRoll, setDiceRoll] = useState(0);
-  const [cityWon, setCityWon] = useState('');
+interface CityGameProps {}
+
+const CityGame: React.FC<CityGameProps> = () => {
+  const [cities, setCities] = useState<string[]>(["New York", "Los Angeles", "Chicago", "Houston", "Phoenix"]);
+  const [newCity, setNewCity] = useState<string>("");
+  const [diceRoll, setDiceRoll] = useState<number>(0);
+  const [cityWon, setCityWon] = useState<string>('');
 
   const addCity = () => {
     if (newCity.trim() !== "") {
@@ -22,10 +25,10 @@ function CityGame() {
 
   return (
     <>
-      <h1>List of Cities</h1>
+      <h1 className="neon-effect">List of Cities</h1>
       <ul className="list-group">
         {cities.map((city, index) => (
-          <li key={index} className="list-group-item">{city}</li>
+          <li key={index} className="list-group-item neon-effect">{city}</li>
         ))}
       </ul>
       <input
@@ -33,17 +36,18 @@ function CityGame() {
         value={newCity}
         onChange={(e) => setNewCity(e.target.value)}
         placeholder="Add new city"
+        className="input-field"
       />
-      <button onClick={addCity}>Add City</button>
-      <div>
-        <h2>Dice Roll</h2>
+      <button onClick={addCity} className="button">Add City</button>
+      <div className="dice-roll-container">
+        <h2 className="neon-effect">Dice Roll</h2>
         <p>Roll the dice to win a trip to a city!</p>
-        <button onClick={handleDiceRoll}>Roll Dice</button>
-        <p>Dice Roll: {diceRoll}</p>
-        <p>City Won: {cityWon}</p>
+        <button onClick={handleDiceRoll} className="dice-roll-button">Roll Dice</button>
+        <p className="dice-roll-result neon-effect">Dice Roll: {diceRoll}</p>
+        <p className="city-won neon-effect">City Won: {cityWon}</p>
       </div>
     </>
   );
-}
+};
 
 export default CityGame;

@@ -1,0 +1,112 @@
+/* Global Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* City List Styles */
+  
+  .list-group {
+    list-style: none;
+    padding: 20px;
+  }
+  
+  .list-group-item {
+    background-color: #2f2f2f;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .list-group-item:hover {
+    background-color: #333;
+  }
+  
+  /* Input and Button Styles */
+  
+  input[type="text"] {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background-color: #4CAF50;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #3e8e41;
+  }
+  
+  /* Dice Roll Styles */
+  
+  .dice-roll-container {
+    margin-top: 20px;
+  }
+  
+  .dice-roll-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background-color: #FF0000;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .dice-roll-button:hover {
+    background-color: #FF3737;
+  }
+  
+  .dice-roll-result {
+    margin-top: 10px;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .city-won {
+    margin-top: 10px;
+    font-size: 18px;
+  }
+  
+  /* Neon Effect */
+  
+  .neon-effect {
+    text-shadow:
+      0 0 5px rgba(255, 255, 255, 0.5),
+      0 0 10px rgba(255, 255, 255, 0.2),
+      0 0 20px rgba(255, 255, 255, 0.1);
+  }
+  
+  /* Add the neon effect to the city names and dice roll result */
+  
+  .list-group-item {
+    text-shadow:
+      0 0 5px rgba(255, 255, 255, 0.5),
+      0 0 10px rgba(255, 255, 255, 0.2),
+      0 0 20px rgba(255, 255, 255, 0.1);
+  }
+  
+  .dice-roll-result {
+    text-shadow:
+      0 0 5px rgba(255, 255, 255, 0.5),
+      0 0 10px rgba(255, 255, 255, 0.2),
+      0 0 20px rgba(255, 255, 255, 0.1);
+  }
